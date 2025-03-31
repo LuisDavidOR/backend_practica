@@ -4,6 +4,9 @@ import rutasClientes from './routes/clientes.routes.js';
 import rutasUsuarios from './routes/usuarios.routes.js';
 import rutasProductos from './routes/productos.routes.js';
 import rutasCategorias from './routes/categorias.routes.js'; //Nueva ruta
+import rutasVentas from './routes/ventas.routes.js';
+import rutasCompras from './routes/compras.routes.js';
+
 
 const app = express();
 
@@ -18,7 +21,9 @@ app.use(express.json());
 app.use('/api', rutasClientes);
 app.use('/api', rutasUsuarios);
 app.use('/api', rutasProductos);
-app.use('/api', rutasCategorias); //Nueva ruta
+app.use('/api', rutasCategorias);
+app.use('/api', rutasVentas);
+app.use('/api', rutasCompras);
 
 // Manejo de rutas no encontradas
 app.use((req, res, next) => {
