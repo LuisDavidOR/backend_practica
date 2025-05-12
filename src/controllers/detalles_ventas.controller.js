@@ -1,4 +1,4 @@
-import { pool } from '../db.js';
+import { pool } from "../db.js";
 
 // Controlador para obtener los detalles de una venta por id_venta
 export const obtenerDetallesVenta = async (req, res) => {
