@@ -30,6 +30,8 @@ app.use('/api', rutasCompras);
 app.use('/api', rutasDetallesCompras);
 app.use('/api', rutasEmpleados);
 app.use('/api', rutasDetallesVentas);
+app.use(express.json({ limit: '10mb' })); // Aumenta a 10 MB
+app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 // Manejo de rutas no encontradas
 app.use((req, res, next) => {
