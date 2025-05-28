@@ -11,6 +11,8 @@ import rutasEmpleados from './routes/empleados.routes.js';
 import rutasDetallesVentas from './routes/detalles_ventas.routes.js';
 
 import rutasEstadisticas from './routes/estadisticas.routes.js';
+import rutasIA from './routes/ia.routes.js';
+
 
 
 const app = express();
@@ -36,6 +38,7 @@ app.use(express.json({ limit: '10mb' })); // Aumenta a 10 MB
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 app.use('/api', rutasEstadisticas);
+app.use('/ia', rutasIA);
 
 // Manejo de rutas no encontradas
 app.use((req, res, next) => {
